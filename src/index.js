@@ -1,13 +1,10 @@
-import Log from "./log";
-import Calc from "./calc";
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-import img from "./react.jpg";
+import "./main.scss";
 
-const calc = new Calc();
-const log = new Log();
+const App = () => <p>Hello</p>;
 
-const el = document.createElement("img");
-el.src = img;
-document.body.appendChild(el);
-
-log.log(calc.add(1, 2, 3));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);

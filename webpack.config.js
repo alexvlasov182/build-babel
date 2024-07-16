@@ -4,7 +4,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jpg$/,
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
+      },
+      /*
+       * Loading images
+       */
+      {
+        test: /\.(jpg|png|gif|ico)$/,
         use: [
           {
             loader: "file-loader",
@@ -13,6 +25,39 @@ module.exports = {
               name: "[name]-[sha1:hash:7].[ext]",
             },
           },
+        ],
+      },
+      /*
+       * Loading fonts
+       */
+      {
+        test: /\.(ttf|otf|eot|woff|woff2)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "fonts",
+              name: "[name].[ext]",
+            },
+          },
+        ],
+      },
+      /*
+       * Loading CSS
+       */
+      {
+        test: /\.(css)$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+      },
+      /*
+       * Loading SASS/SCSS
+       */
+      {
+        test: /\.(scss)$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" },
         ],
       },
     ],
