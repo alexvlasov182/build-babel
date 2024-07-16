@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Oleksandr Vlasov",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack"
+  },
   "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.24.9",
@@ -13,6 +16,7 @@
     "@babel/plugin-transform-template-literals": "^7.24.7",
     "@babel/preset-env": "^7.24.8",
     "@babel/preset-react": "^7.24.7",
+    "file-loader": "^6.2.0",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
   },
