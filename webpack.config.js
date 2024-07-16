@@ -81,7 +81,7 @@ module.exports = (env = {}) => {
          */
         {
           test: /\.(css)$/,
-          use: [getStyleLoaders(), "css-loader"],
+          use: getStyleLoaders(),
         },
         /*
          * Loading SASS/SCSS
@@ -93,7 +93,7 @@ module.exports = (env = {}) => {
       ],
     },
 
-    plugins: [],
+    plugins: getPlugins(),
 
     devServer: {
       open: true,

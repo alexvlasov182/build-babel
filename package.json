@@ -6,7 +6,7 @@
   "author": "Oleksandr Vlasov",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
   "devDependencies": {
