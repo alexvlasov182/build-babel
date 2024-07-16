@@ -1,9 +1,8 @@
-class App {
-  run() {
-    const name = "Golang";
-    console.log(`Hello ${name}`);
-  }
-}
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const app = new App();
-app.run();
+const App = () => <p>Hello</p>;
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
