@@ -1,0 +1,12 @@
+{
+  "name": "build-babel",
+  "version": "1.0.0",
+  "description": "Babel",
+  "main": "index.js",
+  "author": "Oleksandr Vlasov",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9"
+  }
+}
